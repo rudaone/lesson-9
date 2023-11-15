@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <main>
+        <div class="header"></div>
+        <div class="content-container">
+            <div class="content-card">
+                <div class="content-card__big"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+            </div>
+            <div class="content-card">
+                <div class="content-card__big"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+            </div>
+            <div class="content-card">
+                <div class="content-card__big"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+                <div class="content-card__small"></div>
+            </div>
+        </div>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            main{
+                margin: 15px auto;
+            }
+            body{
+                margin: 0;
+            }
+            .header{
+                margin: 15px auto;
+                width: 100vw;
+                height: 100px;
+                background-color: orange;
+            }
+
+            .content-container{
+                margin: 0 auto;
+                width: 100vw;
+                display: flex;
+                justify-content: space-between;
+                gap: 70px;
+            }
+            .content-card{
+                width:100%;
+                }
+
+            .content-card__big{
+                margin: 15px auto;
+                width: 100%;
+                height: 300px;
+                background-color: lightsalmon;
+            }
+
+            .content-card__small{
+                margin: 30px auto;
+                width: 100%;
+                height: 30px;
+                background-color: lightsalmon;
+            }
+
+            @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+                .content-card:first-child{
+                    display: none;
+                }
+
+                .content-card{
+                    width: 50%;
+                }
+                .header{
+                    width: 100% ;
+                }
+            }
+
+            @media only screen and (min-width: 375px) and (max-width: 767px) and (orientation: portrait) {
+                .content-card:nth-child(odd){
+                    display: none;
+                }
+
+                .content-card{
+                    width: 100%;
+                }
+                .header{
+                    width: 100% ;
+                }
+            }
+        </style>
+
+    </main>
+</body>
+</html>
